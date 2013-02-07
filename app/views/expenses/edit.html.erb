@@ -1,0 +1,15 @@
+<h1> Edit this Expense</h1>
+
+<%= form_for @expense do |e| %>
+  <%= e.label :amount, "Amount:" %>
+  <%= e.text_field :amount %>
+    <p></p>
+
+  <%= e.label :expense_type, "Expense Type:" %>
+  <%= e.text_field :expense_type %>
+<p></p>
+<%= e.submit %>
+
+<% end %>
+
+<%= link_to "Go back to index", expenses_url %>

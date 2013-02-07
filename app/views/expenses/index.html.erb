@@ -1,0 +1,12 @@
+<h1>Here are the Expenses</h1>
+
+<% @expenses.each do |e| %>
+<%= e.expense_type %>
+$<%= e.amount %>
+<%= link_to "edit this entry", edit_expense_url(e.id) %>
+<%= link_to "delete this entry", expense_url(e.id), :method => 'delete' %>
+<p></p>
+<% end %>
+
+<%= link_to "Create a new Expense", new_expense_url %>
+
